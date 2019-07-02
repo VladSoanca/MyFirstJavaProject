@@ -349,6 +349,7 @@ public class LogicalOP {
         int[] myArray = new int[51];
         int count = 0;
         for (int i = 0; i <= 100; i++) {
+            //verifica fiecare numar pana la 100 sa vad daca este divizibil cu 2 iar daca este i adaug in array
             if (i % 2 == 0) {
                 myArray[count] = i;
                 count++;
@@ -361,6 +362,7 @@ public class LogicalOP {
     //Average ARRAY
     public float getAverageArray(int[] myArray) {
         float sum = 0;
+        //adun fiecare numar din array la sum si apoi impart la marimea arrayului pentru a afla media
         for (int i = 0; i < myArray.length; i++)
             sum = sum + myArray[i];
         return (sum / myArray.length);
@@ -370,6 +372,7 @@ public class LogicalOP {
     //Verificare daca un numar se afla in Array
     public void checkIfNumberInArray(int[] myArray, int x) {
         boolean check = false;
+        //parcurg arrayul iar cand gasesc numarul check ca primi true altfel check va ramane fals
         for (int i = 0; i < myArray.length; i++) {
             if (x == myArray[i])
                 check = true;
@@ -381,10 +384,12 @@ public class LogicalOP {
     //Checks if a number is in the array
     public int checkIfNumberInArrayIndex(int[] myArray, int x) {
         int a = -1;
+        //parcurg arrayul si compar fiecare element din array cu variabila x
         for (int i = 0; i < myArray.length; i++)
             if (x == myArray[i]) {
                 a = i;
                 break;
+                //cand gasesc x opresc verificarea cu break si returnez indexul unde am gasit x
             }
 
         return a;
@@ -393,7 +398,10 @@ public class LogicalOP {
     //EXE 7
     //Display array
     public void showCharactersArray() {
+        // am creat un array sub forma ceruta
         char[] myArray = {'-', '-', '-', '-', '-', '-', '-'};
+        //afisez arrayul iar cand termina de afisat printoutln
+        // va da un rand nou pentru a fi afisat dinou arrayul
         for (int i = 0; i < 6; i++) {
             System.out.println();
 
@@ -448,6 +456,7 @@ public class LogicalOP {
     }
 
     //EXE 10
+    //copiez arrayul primit in altul de aceasi marime numar cu numar
     public int[] copyAnArrayToAnother(int[] myArray, int[] mySecondArray) {
         for (int i = 0; i < myArray.length; i++) {
             mySecondArray[i] = myArray[i];
@@ -460,10 +469,19 @@ public class LogicalOP {
 
     //EXE 2 OP
     //Insert number in array to specific position
-    public int[] insertNumberInArray(int[] myArray, int number, int position) {
-        myArray[position] = number;
-        return myArray;
 
+    public int[] insertNumberInArray(int[] myArray, int number, int position) {
+        //creez un nou array cu o dimensiune mai mare cu 1 pentru a permite numarului sa fie introdus
+        int[] mySecondArray = new int[myArray.length + 1];
+        for (int i = 0; i < mySecondArray.length; i++) {
+            if(i==position){
+                mySecondArray[i]=number;
+            }else if(i>position){
+                mySecondArray[i]=myArray[i-1];
+            }
+
+        }
+        return mySecondArray;
     }
 
     //EXE 3 OP
@@ -500,9 +518,6 @@ public class LogicalOP {
         for (int i = 0; i < myArray.length; i++)
             myArray[i] = mySecondArray[i];
     }
-
-
-
 
 
 }
