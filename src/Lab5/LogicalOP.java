@@ -491,10 +491,12 @@ public class LogicalOP {
     public void switchValuesOfArray(int[] myArray) {
         int[] mySecondArray = new int[myArray.length];
         int index = myArray.length;
+        //Fac o copie inversata a arrayului
         for (int i = 0; i < myArray.length; i++) {
             mySecondArray[i] = myArray[index - 1];
             index--;
         }
+        //copiez arrayul inversat peste cel initial si va iesi un array inversat :)
         for (int i = 0; i < myArray.length; i++)
             myArray[i] = mySecondArray[i];
     }
