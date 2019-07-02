@@ -331,7 +331,7 @@ public class LogicalOP {
         }
     }
 
-    //~~~~~~~~~TEMA 13~~~~~~~~~~~~~~~~~
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TEMA 13~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     //EXE 2
     //Array from 0 to 100
     public int[] getArrayToHundred() {
@@ -424,36 +424,37 @@ public class LogicalOP {
         }
         return myNextArray;
     }
+
     //EXE 9
     //Afisez al doilea cel mai mic numar di array
-    public int showSecondSmallestNumberInArray(int[]myArray){
-        int min1,min2;
+    public int showSecondSmallestNumberInArray(int[] myArray) {
+        int min1, min2;
         // verificam primele 2 numere din array care este mai mare
         // si initializam variabilele min1 si min2 in functie de rezultat
-        if(myArray[0]<myArray[1]) {
+        if (myArray[0] < myArray[1]) {
             min1 = myArray[0];
             min2 = myArray[1];
-        }else{
-            min1=myArray[1];
-            min2=myArray[0];
+        } else {
+            min1 = myArray[1];
+            min2 = myArray[0];
         }
         //parcurgem arrayul pentru a gasi numere mai mici decat cele initializate anterior
-        for(int i=2;i<myArray.length;i++)//arrayul va pleca de la pozoita 2
-            if(myArray[i]<min1){
-                min2=min1;
-                min1=myArray[i];
+        for (int i = 2; i < myArray.length; i++)//arrayul va pleca de la pozoita 2
+            if (myArray[i] < min1) {
+                min2 = min1;
+                min1 = myArray[i];
             }
         return min2;
     }
+
     //EXE 10
-    public int[] copyAnArrayToAnother(int[]myArray,int[]mySecondArray ){
-        for(int i=0;i<myArray.length;i++){
-            mySecondArray[i]=myArray[i];
+    public int[] copyAnArrayToAnother(int[] myArray, int[] mySecondArray) {
+        for (int i = 0; i < myArray.length; i++) {
+            mySecondArray[i] = myArray[i];
 
         }
         return mySecondArray;
     }
-
 
 
 }
