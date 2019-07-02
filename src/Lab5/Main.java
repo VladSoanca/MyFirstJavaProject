@@ -8,14 +8,17 @@ public class Main {
         // for(int i=0;i<myArray.length;i++)
         //   System.out.println(myArray[i]);
         // op.showCharactersArray();
-        int[] myArray = {-1, -2, 2, 3, 4, 5, 1, 7, 2, 2, 3, 4};
+        int[] myArray = {1,2,3,4,5,6};
 //int[] mySecondArray=op.removeANumberFromArray(myArray,2);
 //for(int i=0;i<mySecondArray.length;i++)
         //  System.out.println(mySecondArray[i]);
-        System.out.println(op.showSecondSmallestNumberInArray(myArray));
-
+        //System.out.println(op.showSecondSmallestNumberInArray(myArray));
+        op.switchValuesOfArray(myArray);
+for(int i=0;i<myArray.length;i++)
+    System.out.println(myArray[i]);
 
     }
+
 
 
 }

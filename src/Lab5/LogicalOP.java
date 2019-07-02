@@ -455,6 +455,52 @@ public class LogicalOP {
         }
         return mySecondArray;
     }
+//~~~~~~~~~~~~~~~~~~~~~~~~~Tema 13 varianta optionala~~~~~~~~~~~~~~~~~~~~~~~~~
+    //EXE 1 il gasiti in Tema 13 EXE 9
+
+    //EXE 2 OP
+    //Insert number in array to specific position
+    public int[] insertNumberInArray(int[] myArray, int number, int position) {
+        myArray[position] = number;
+        return myArray;
+
+    }
+
+    //EXE 3 OP
+    //Find min and max in array
+    public void findMinAndMax(int[] myArray) {
+        //initializez min si max cu prima valoare din array
+        int min = myArray[0];
+        int max = myArray[0];
+        //Caut ce mai mare numar din array comparand max cu fiecare numar din array
+        for (int i = 1; i < myArray.length; i++)
+            if (myArray[i] > max) {
+                max = myArray[i];
+            }
+        System.out.println("Maximul din array este " + max);
+        //Caut cel mai mic numar din array comparand min cu fiecare numar din array
+        for (int i = 1; i < myArray.length; i++)
+            if (min < myArray[i]) {
+                min = myArray[i];
+            }
+        System.out.println("Minimul din array este " + min);
+    }
+    //EXE 4 OP
+
+    //Metoda sa inverseze valorile din array
+    public void switchValuesOfArray(int[] myArray) {
+        int[] mySecondArray = new int[myArray.length];
+        int index = myArray.length;
+        for (int i = 0; i < myArray.length; i++) {
+            mySecondArray[i] = myArray[index - 1];
+            index--;
+        }
+        for (int i = 0; i < myArray.length; i++)
+            myArray[i] = mySecondArray[i];
+    }
+    //EXE 5 OP
+
+
 
 
 }
