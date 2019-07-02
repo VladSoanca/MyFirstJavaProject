@@ -474,15 +474,18 @@ public class LogicalOP {
         //creez un nou array cu o dimensiune mai mare cu 1 pentru a permite numarului sa fie introdus
         int[] mySecondArray = new int[myArray.length + 1];
         for (int i = 0; i < mySecondArray.length; i++) {
-            if(i==position){
-                mySecondArray[i]=number;
-            }else if(i>position){
-                mySecondArray[i]=myArray[i-1];
+            if (i == position) {
+                mySecondArray[i] = number;
+            } else if (i > position) {
+                mySecondArray[i] = myArray[i - 1];
+            } else {
+                mySecondArray[i] = myArray[i];
             }
-
         }
+
+
         return mySecondArray;
-    }
+}
 
     //EXE 3 OP
     //Find min and max in array
@@ -517,6 +520,11 @@ public class LogicalOP {
         //copiez arrayul inversat peste cel initial si va iesi un array inversat :)
         for (int i = 0; i < myArray.length; i++)
             myArray[i] = mySecondArray[i];
+    }
+    //O metoda de a afisa arrayul (nu are legatura cu tema)
+    public void printArray(int[]myArray){
+        for(int i=0;i<myArray.length;i++)
+            System.out.println(myArray[i]);
     }
 
 

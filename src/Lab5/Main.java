@@ -13,9 +13,12 @@ public class Main {
 //for(int i=0;i<mySecondArray.length;i++)
         //  System.out.println(mySecondArray[i]);
         //System.out.println(op.showSecondSmallestNumberInArray(myArray));
-        op.switchValuesOfArray(myArray);
-for(int i=0;i<myArray.length;i++)
-    System.out.println(myArray[i]);
+    //    op.switchValuesOfArray(myArray);
+//for(int i=0;i<myArray.length;i++)
+  //  System.out.println(myArray[i]);
+myArray=op.insertNumberInArray(myArray,3,3);
+       op.printArray(myArray);
+
     }
 
 
