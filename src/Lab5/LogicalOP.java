@@ -498,7 +498,7 @@ public class LogicalOP {
         for (int i = 0; i < myArray.length; i++)
             myArray[i] = mySecondArray[i];
     }
-    //EXE 5 OP
+
 
 
 
